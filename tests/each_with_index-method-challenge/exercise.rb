@@ -19,7 +19,7 @@ class EachWithIndexChallengeTest < Test::Unit::TestCase
     end
 
     def test_non_array_argument
-        non_array = BasicObject.new
+        non_array = Object.new
         expected_result = nil
         result = EachWithIndexChallenge.answer(non_array)
         assert_equal(expected_result, result)

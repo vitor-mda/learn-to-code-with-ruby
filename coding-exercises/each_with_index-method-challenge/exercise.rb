@@ -5,7 +5,7 @@ module EachWithIndexChallenge
         return if array.nil? || !(array.is_a? Array) || array.empty?
 
         sum = 0
-        array.each_with_index { |element, i| sum = sum + element * i}
+        array.each_with_index { |element, i| sum += element * i}
 
         sum
     end

@@ -5,13 +5,13 @@ class EachWithIndexChallenge2Test < Test::Unit::TestCase
     def test_valid_arrays
         0.upto(10) do |i|
             array = (0..i).to_a
-            expected_result = Array.new(11, 0)
+            expected_result = []
             result = EachWithIndexChallenge2.answer(array)
             assert_equal(expected_result, result)
         end
 
         10.downto(0) do |i|
-            array = (i..10).to_a
+            array = (i..10).to_a.reverse!
             expected_result = [24, 21, 16, 9, 0]
             expected_result.pop(i)
             result = EachWithIndexChallenge2.answer(array)

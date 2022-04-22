@@ -5,7 +5,9 @@
 #   - each word in the sentence is separated by a single space
 #   - the sentence does not contain any symbols or characters, including punctuation.
 def longest_word(sentence)
-
+    longest_word = nil
+    sentence.split.each { |word| longest_word = word if longest_word.nil? || word.length >= longest_word.length }
+    longest_word
 end
 
 module Exercise3

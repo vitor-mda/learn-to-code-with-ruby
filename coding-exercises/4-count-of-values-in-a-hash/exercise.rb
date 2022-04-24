@@ -2,6 +2,9 @@
 # The method should return the number of times the value
 # appears among all the values in the hash.
 def value_count(hash, value)
+    count = 0
+    hash.each_value { |v| count += 1 if v == value}
+    count
 end
 
 module Exercise4

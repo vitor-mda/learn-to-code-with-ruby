@@ -10,5 +10,9 @@ class Computer
       @memory = 64
       @storage = '2 TB'
     end
+
+    def to_s
+        "A powerful #{@cpu} computer with #{@memory}GB memory and #{@storage} of storage"
+    end
   end
   
